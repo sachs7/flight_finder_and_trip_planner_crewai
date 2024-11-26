@@ -27,3 +27,6 @@ Note: _The code is tested on Python version: 3.12.0_
 # Sample Results:
 
 1. The output is stored as a `trip_itinerary.md` file
+
+<img width="964" alt="Screenshot 2024-11-25 at 9 46 17 PM" src="https://github.com/user-attachments/assets/98c1ea7c-96b6-453d-8292-c05e05d6dd24">
+<img width="964" alt="Screenshot 2024-11-25 at 9 46 44 PM" src="https://github.com/user-attachments/assets/9b4c241d-e750-4000-86ad-53d8ff033938">
