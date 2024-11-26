@@ -1,0 +1,19 @@
+[project]
+name = "flight_finder_and_trip_planner_crewai"
+version = "0.1.0"
+description = "flight_finder_and_trip_planner_crewai using crewAI"
+authors = [{ name = "Sachin Uplaonkar", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.80.0,<1.0.0",
+    "google-search-results==2.4.2",
+    "serpapi==0.1.5",
+]
+
+[project.scripts]
+flight_finder_and_trip_planner_crewai = "flight_finder_and_trip_planner_crewai.main:run"
+run_crew = "flight_finder_and_trip_planner_crewai.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

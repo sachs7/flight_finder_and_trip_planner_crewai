@@ -1,0 +1,37 @@
+travel_agent_task:
+  description: >
+    Find the best flights to {destination} from {origin} on {departure_date}. The {return_date} is optional, if provided, include that in the flight search.
+    The flight should be the cheapest one.
+  expected_output: >
+    A list of 5 flights with the following MUST information:
+    - Flight Number
+    - Flight Date
+    - Departure Time
+    - Arrival Time
+    - Price/Fare (in USD)
+    - Airlines (Airline Name)
+  agent: travel_agent
+
+tour_planner_agent_task:
+  description: >
+    Find the most attractive locations at {destination}.
+    Recommend scenic locations and fun activities that align with the traveler's preferences.
+    Use internet search tools, and travel guides.
+    Make sure to find a variety of options to suit different tastes and budgets, and ratings for them.
+
+  expected_output: >
+    A list of recommended scenic locations.
+    Each entry should include the name, location (address), distance from each other, and a brief description and ratings.
+  agent: tour_planner_agent
+
+
+summary_agent_task:
+  description: >
+    Compile all researched information into a comprehensive itinerary for the trip to {destination}.
+    Ensure the Flight Summary section should should be at the top, include the details that were capture from the tool ONLY. DO NOT make up flights here, just show what was captured from the tool.
+    Use text formatting and document creation tools to organize the information.
+  expected_output: >
+    A detailed itinerary document, the itinerary should include a day-by-day
+    plan with list of top 5 available flights (that we got from the tool), list of top 3 hotels and their details, list of activities, list of restaurants, and a list of scenic locations based on the number of days of stay if return_date is given else give a list of top 10 scenic locations. Save it as a format in a markdown file. Formatted as markdown without '```'
+  agent: summary_agent
+  context: [travel_agent_task, tour_planner_agent_task]
