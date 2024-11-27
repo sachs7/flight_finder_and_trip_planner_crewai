@@ -22,13 +22,13 @@ class SearchFlightsInput(BaseModel):
 class SearchFlights(BaseTool):
     name: str = "Search Flights Tool"
     description: str = (
-        "This tool queries Google Flights SerpAPI, that helps in searching for flights "
+        "This tool queries Google Flights SerpAPI, which helps in searching for flights "
         "for a given Origin/Destination combination and specified Departure/Return dates. "
         "The return date is optional."
     )
     args_schema = SearchFlightsInput
 
-    def _run(self, origin, destination, departure_date, return_date) -> Any:
+    def _run(self, origin: str, destination: str, departure_date: str, return_date: Optional[str] = None) -> Any:
         """Run the flight search with provided arguments."""
         if not SERPAPI_KEY:
             raise ValueError("SERPAPI_API_KEY environment variable is not set")
