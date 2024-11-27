@@ -30,7 +30,7 @@ If you want to run this as a Streamlit app follow the steps:
 1. Clone the repo
 2. Install UV: `pip install uv`
 3. Create virtual environment using, `uv venv --python 3.12`
-4. Install the libraries mentioned in `pyproject.toml` dependencies section using `uv pip install xxxxxx` (OR if you have `poetry` available, then do: `poetry install`)
+4. Install the libraries mentioned in `pyproject.toml` dependencies section using `uv pip install xxxxxx`
 5. To run the app: `streamlit run main_streamlit.py` and follow the instructions to access it in a browser
 
 # Sample Results:
