@@ -28,7 +28,13 @@ class SearchFlights(BaseTool):
     )
     args_schema = SearchFlightsInput
 
-    def _run(self, origin: str, destination: str, departure_date: str, return_date: Optional[str] = None) -> Any:
+    def _run(
+        self,
+        origin: str,
+        destination: str,
+        departure_date: str,
+        return_date: Optional[str] = None,
+    ) -> Any:
         """Run the flight search with provided arguments."""
         if not SERPAPI_KEY:
             raise ValueError("SERPAPI_API_KEY environment variable is not set")
