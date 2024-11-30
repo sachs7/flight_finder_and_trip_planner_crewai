@@ -18,7 +18,8 @@ Note: _The code is tested on Python version: 3.12.0_
 1. Clone the repo
 2. Install UV: `pip install uv`
 3. Create virtual environment using, `uv venv --python 3.12`
-4. Run `crewai run`
+4. Run `crewai install` to install all the dependencies
+5. Run `crewai run`
 
 > [!CAUTION]
 > Google SERPAPI is used here to search for flights. If using a free tier, it shouldn't be used for commercial purposes.
